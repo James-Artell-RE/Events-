@@ -1,0 +1,729 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Events</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://kit.fontawesome.com/3b24483455.js" crossorigin="anonymous"></script>
+    <style>
+        body,
+        h1,
+        h2,
+        h3,
+        h4,
+        h5,
+        h6 {
+            font-family: "Raleway", sans-serif
+        }
+
+
+        .contact-form {
+            display: flex;
+            flex-direction: row;
+            justify-content: right;
+            margin: 50px;
+
+
+            width: 80%;
+
+            background-color: lightgray;
+            padding: 20px;
+            border-radius: 10px;
+
+        }
+
+        input[type=text],
+        select,
+        textarea {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=email] {
+            width: 100%;
+            padding: 12px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+            box-sizing: border-box;
+            margin-top: 6px;
+            margin-bottom: 16px;
+            resize: vertical;
+        }
+
+        input[type=submit] {
+            background-color: #04AA6D;
+            color: white;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+
+        input[type=submit]:hover {
+            background-color: #45a049;
+        }
+
+
+
+        .show {
+            display: block;
+        }
+
+        .container {
+            margin-top: 20px;
+            overflow: hidden;
+        }
+
+        /* Style the buttons */
+        .btn {
+            /*  
+            border: none;
+            outline: none;
+            padding: 12px 16px;
+            background-color: #f1f1f1;
+            cursor: pointer;
+        }
+        */
+
+            .btn:hover {
+                background-color: #ddd;
+            }
+
+            .btn.active {
+                background-color: #666;
+                color: white;
+            }
+
+            .mcw-wrap_250 {
+                padding: 20px;
+            }
+
+            hr {
+                width: 40%;
+                color: black;
+            }
+
+            a {
+                text-decoration: none;
+            }
+
+            .into {
+                position: absolute;
+                top: 50%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+
+            }
+
+            body {
+                font-family: "Lato", sans-serif;
+            }
+
+            .sidepanel {
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                height: 250px;
+                top: 0;
+                left: 0;
+                background-color: #fafbfc;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+            }
+
+            .sidepanel a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #818181;
+                display: block;
+                transition: 0.3s;
+            }
+
+            .sidepanel a:hover {
+                color: #f1f1f1;
+            }
+
+            .sidepanel .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+            }
+
+            .openbtn {
+                font-size: 20px;
+                cursor: pointer;
+                background-color: #111;
+                color: white;
+                padding: 10px 15px;
+                border: none;
+            }
+
+            .openbtn:hover {
+                background-color: #444;
+            }
+    </style>
+</head>
+
+<body class="w3-light-grey w3-content" style="max-width:1600px">
+
+    <!-- Sidebar/menu -->
+    <nav class="w3-sidebar w3-collapse w3-white w3-animate-left" style="z-index:3;width:300px;" id="mySidebar"><br>
+        <div class="w3-container">
+            <a href="#" onclick="w3_close()" class="w3-hide-large w3-right w3-jumbo w3-padding w3-hover-grey"
+                title="close menu">
+                <i class="fa fa-remove"></i>
+            </a>
+            <a href="https://www.raveis.com/agent/JamesArtell/16844" target="_blank"><img src="./images/9H1A8870.jpg"
+                    style="width:45%;" class="w3-round"><br><br></a>
+            <h4><b>Marybeth Sullivan <br>
+                    & James Artell
+                </b></h4>
+
+        </div>
+        <div class="w3-bar-block">
+            <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i
+                    class="fa fa-th-large fa-fw w3-margin-right"></i>EVENTS</a>
+
+            <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
+                    class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
+
+        </div>
+        <div class="w3-panel w3-large">
+
+
+        </div>
+
+        <div class="mcw-wrap_250" id="maoWrap">
+            <div id="mcwWidget"></div>
+            <script>var maoCalc = {}; maoCalc.settings = { "theme": "theme4", "view": "vertical1", "responsive": "mcw-wrap_250", "font": "Helvetica Neue, Helvetica, Arial, sans-serif", "border": true, "boxShadow": true, "backgroundColor": "#f9f9f9", "fieldColor": "#fff", "textColor": "#334356", "borderColor": "#dde2e5", "currency": "$", "currencySide": "left", "delimiters": ",.", "popup": true, "popupView": "doughnutPopup", "style": true, "widgetTotalInterest": false, "widgetTotalPrincipal": false, "monthlyPayment": "Monthly Payment", "totalPrincipalPaid": "Total Principal", "totalInterestPaid": "Total Interest", "totalPayments": "Total Payments", "years": "years", "title": { "enabled": true, "color": "#334356", "label": "Mortgage Calculator" }, "homePrice": { "label": "Home Price", "value": "350,000" }, "downPayment": { "enabled": true, "label": "Down Payment", "value": "52,000" }, "interestRate": { "label": "Interest Rate", "value": "4.05" }, "mortgageTerm": { "label": "Mortgage Term", "value": "30" }, "pmi": { "enabled": true, "label": "PMI", "value": "1,881.24" }, "taxes": { "enabled": true, "label": "Taxes", "value": "4,375" }, "insurance": { "enabled": true, "label": "Insurance", "value": "1,225" }, "hoa": { "enabled": false, "label": "HOA", "value": false }, "extra": { "enabled": true, "labelAdd": "Add extra payments", "labelRemove": "Remove extra payments", "labelToMonthy": "To monthly", "labelYearly": "Extra yearly" }, "startDate": { "enabled": true, "label": "Start Date" }, "monthsArr": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], "button": { "color": "#fff", "bg": "#09f", "label": "Calculate" }, "amortizationSchedule": "Amortization Schedule", "popupLabels": { "monthlyPrincipalInterest": "Monthly Principal & Interest", "monthlyExtraPayment": "Monthly Extra Payment", "monthlyPayment": "MONTHLY PAYMENT", "downPayment": "Down payment", "extraPayments": "Extra payments", "totalPrincipalPaid": "Total principal paid", "totalInterestPaid": "Total interest paid", "totalOfAllPayments": "TOTAL OF ALL PAYMENTS", "amortizationSchedule": "Amortization Schedule", "tablePaymentDate": "Payment date", "tablePayment": "Payment", "tablePrincipal": "Principal", "tableInterest": "Interest", "tableTotalInterest": "Total Interest", "tableBalance": "Balance", "pmi": "PMI", "taxes": "Taxes", "insurance": "Insurance", "shortInsurance": "Ins", "hoa": "HOA", "chartBalance": "Balance", "chartPrincipal": "Principal", "chartInterest": "Interest" }, "useTitleAsLink": false, "titleLinkUrl": "", "useFooterLink": false, "footerLinkAnchor": "", "footerLinkUrl": "" }; (function () { function loadScript(src) { var s, t; s = document.createElement("script"); s.src = src; t = document.getElementsByTagName("script")[0]; t.parentNode.insertBefore(s, t); } function decode(str) { return !window.btoa ? 'not_found' : window.btoa(unescape(encodeURIComponent(str))); } var uri = 'https://mortgage-advice-online.org/widget/' + decode(window.location) + '.js'; loadScript(uri); })();</script>
+        </div>
+
+        <br>
+        <br>
+    </nav>
+
+    <div>
+
+
+
+
+
+
+
+        <!-- Overlay effect when opening sidebar on small screens -->
+
+
+        <div class=" w3-overlay w3-hide-large w3-animate-opacity" onclick="w3_close()" style="cursor:pointer"
+            title="close side menu" id="myOverlay">
+        </div>
+
+
+        <div class="w3-main" style="margin-left:300px">
+
+            <!-- Header -->
+            <header id="portfolio">
+
+
+                <br>
+                <br>
+
+
+
+                <div class="w3-third w3-container w3-margin-bottom ">
+
+                    <img src="./images/9H1A8870.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                    <div class="into">
+
+                        <p>Marybeth Sullivan & James Artell </p>
+                        <p>Sales Associate</p>
+                        <p>james.artell@raveis.com</p>
+                        <p>203-979-8026</p>
+                        <p>Marybeth.Sullivan@raveis.com</p>
+                        <p>203-984-8025</p>
+
+
+                    </div>
+
+                </div>
+
+
+                <div class="w3-container">
+                    <h1><b class="head">January 2023 Events</b></h1>
+
+                </div>
+
+
+            </header>
+            <div class="container">
+
+
+                <!-- First Photo Grid-->
+                <div class="w3-row-padding">
+
+                    <br>
+
+                    <a href="https://ridgefieldplayhouse.org/event/ridgefield-responds-presents-hope-for-ukraine/"
+                        target="_blank">
+                        <div class="w3-third w3-container w3-margin-bottom">
+
+                            <img src="./images/full_A_RISING_FURY_STILL1_16X9.png" alt="Norway" style="width:100%"
+                                class="w3-hover-opacity">
+                            <div class="w3-container w3-white">
+                                <p><b>A Rising Fury Jan 8th</b></p>
+
+                                <p>“A Rising Fury” premiered at the Tribeca Film Festival 2022 and tracks the evolution
+                                    of the conflict in Ukraine. Filmed over 8 years, it follows two hopeful Ukrainian
+                                    idealists from the peaceful protest of the 2013 Maidan Revolution in Kyiv to the
+                                    full-scale Russian invasion of Ukraine in February 2022.
+                                </p>
+                            </div>
+
+                        </div>
+                    </a>
+
+
+                    <a href="https://www.eventbrite.com/e/pizza-making-class-new-haven-style-dough-to-dish-held-at-next-door-tickets-390609151487?aff=ebdssbdestsearch"
+                        target="_blank">
+                        <div class="w3-third w3-container w3-margin-bottom">
+                            <img src="./images/pizza-horizontal.jpg" alt="Norway" style="width:100%" object-fit="cover"
+                                class="w3-hover-opacity">
+                            <div class="w3-container w3-white">
+                                <br>
+
+                                <p><b>Pizza Making Class Jan 9th</b></p>
+                                <p>Pizza Making Class @ Your Home, 1:1, Neighborhood/Family, Corporate Team Building &
+                                    Brick/Mortar location in New Haven, CT.</p>
+                                <br>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                    </a>
+
+                    <a href="https://www.eventbrite.com/e/in-person-relax-and-reset-soul-soothing-sound-bath-tickets-502666909257?aff=ebdssbdestsearch"
+                        target="_blank">
+                        <div class="w3-third w3-container">
+                            <img src="./images/soundbath.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                            <div class="w3-container w3-white">
+                                <br>
+                                <p><b>Sound Bath Jan 12th</b></p>
+                                <p>Relax, reset, and recharge yourself with a deeply relaxing soul soothing Sound Bath!
+                                </p>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <br>
+
+                <div class="w3-row-padding">
+                    <a href="https://happeningnext.com/event/2023-comedy-competition-eid4so12qe02u1" target="_blank">
+                        <div class="w3-third w3-container w3-margin-bottom">
+                            <img src="./images/mic-g38974c815_1280.jpg" alt="Norway" style="width:100%"
+                                class="w3-hover-opacity">
+                            <div class="w3-container w3-white">
+                                <p><b>2023 Comedy Competition Jan 11th</b></p>
+                                <p>This is free for Comics and and guest to come up and try their hands at the mic, our
+                                    Judges are always competely rando, and picked from the Crown. Invite your friends
+                                    and family to have a chance to Judge our next show and to see who's the funniest
+                                    Comedian in the WORLD!!!</p>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://sono1420.com/events/pizza-night-95tl3" target="_blank">
+                        <div class="w3-third w3-container w3-margin-bottom">
+
+                            <img src="./images/pizza-gdd74e1e42_1280.jpg" alt="Norway" style="width:100%"
+                                class="w3-hover-opacity">
+                            <div class="w3-container w3-white">
+                                <p><b>SONO 1420 Pizza Night Jan 13th</b></p>
+                                <p>Get a signature pizza from Pieology Pizza Truck and a craft cocktail drink special
+                                    for
+                                    $20.</p>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+
+                            </div>
+
+                        </div>
+                    </a>
+                    <a href="https://quickcenter.fairfield.edu/2022-23-season-calendar/opera/met-hd-live-fedora.html"
+                        target="_blank">
+                        <div class="w3-third w3-container">
+                            <img src="./images/vienna-g6b4a231ce_1280.jpg" alt="Norway" style="width:100%"
+                                class="w3-hover-opacity">
+                            <div class="w3-container w3-white">
+                                <p><b>
+                                        The Metropolitan Opera: HD Live Jan 14th</b></p>
+                                <p>
+
+                                    Giordano’s exhilarating drama Fedora returns to the Met for the first time in 25
+                                    years,
+                                    starring soprano Sonya Yoncheva in the title role of the 19th-century princess who
+                                    falls
+                                    in love with her fiancé’s murderer, Count Loris, sung by tenor Piotr Beczała.</p>
+                                <br>
+
+
+                            </div>
+                        </div>
+                    </a>
+                </div>
+
+                <br>
+
+
+                <!-- Second Photo Grid-->
+                <div class="w3-row-padding">
+
+
+                    <a href="https://www.thenorwalkartspace.org/calendar" target="_blank">
+                        <div class="w3-third w3-container w3-margin-bottom">
+                            <img src="./images/brushes-g23a75169a_1280.jpg" alt="Norway" style="width:100%"
+                                class="w3-hover-opacity">
+                            <div class="w3-container w3-white">
+                                <p><b>The Norwalk Art Space Jan 15th</b></p>
+                                <p>Artist Talk featuring Korry Fellow Jerri Graham with invited artists Tim Holmstrom
+                                    and
+                                    Melissa Newman, discussing their current exhibition "Layers Revealed". Moderated by
+                                    David Green of The Cultural Alliance of Fairfield County</p>
+                                <br>
+
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.thenorwalkartspace.org/calendar" target="_blank">
+                        <div class="w3-third w3-container w3-margin-bottom">
+                            <img src="./images/art-g18216c046_1280.jpg" alt="Norway" style="width:100%"
+                                class="w3-hover-opacity">
+                            <div class="w3-container w3-white">
+                                <p><b>
+                                        Reception at SONO Collection: Sarah King Exhibition Jan 19th</b></p>
+                                <p>Reception for an art exhibition featuring Korry Fellow Sarah King with visiting
+                                    artists
+                                    Judy Glantzman and Maryna Bilak. </p>
+                                <br>
+                                <br>
+                                <br>
+
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.eventbrite.com/e/food-wine-tasting-tickets-487394559247?aff=ebdssbdestsearch"
+                        target="_blank">
+                        <div class="w3-third w3-container">
+
+                            <img src="./images/red-wine-ga19204fa8_1280.jpg" alt="Norway" style="width:100%"
+                                class="w3-hover-opacity">
+                            <div class="w3-container w3-white">
+                                <p><b>Food and Whine tasting Jan 20th</b></p>
+                                <p>Attendees will enjoy expertly paired wines with some of the best Italian small bites
+                                    available in Stamford, CT</p>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                    </a>
+
+
+
+                </div>
+                <br>
+
+                <div class="w3-row-padding">
+
+
+                    <a href="https://www.eventbrite.com/e/pickleball-social-event-tickets-490683917807" target="_blank">
+                        <div class="w3-third w3-container w3-margin-bottom">
+                            <img src="./images/asphalt-tennis-court-ga2d5907f6_1280.jpg" alt="Norway" style="width:100%"
+                                class="w3-hover-opacity">
+                            <div class="w3-container w3-white">
+                                <p><b>Pickleball Social Event Jan 20th</b></p>
+                                <p>Calling new and seasoned players, and spectators, too! Enjoy a night of friendly
+                                    competition plus food, drink and fun under the tent.</p>
+                                <br>
+                                <br>
+                                <br>
+
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.eventbrite.com/e/the-winter-freake-out-feat-funke-your-face-tickets-472710398527?aff=ebdssbdestsearch"
+                        target="_blank">
+                        <div class="w3-third w3-container w3-margin-bottom">
+                            <img src="./images/guitar-g5c62fc168_1280.jpg" alt="Norway" style="width:100%"
+                                class="w3-hover-opacity">
+                            <div class="w3-container w3-white">
+                                <p><b>
+                                        The Winter Freake Out - feat. Funke Your Face Jan 21st</b></p>
+                                <p>Please join Funke Your Face for The Winter Freake Out. 2 sets of Grateful Dead music
+                                    with a liquid light show by Macrodose. </p>
+                                <br>
+                                <br>
+                                <br>
+
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.eventbrite.com/e/3rd-annual-norwalk-film-festival-tickets-487221060307?aff=ebdssbdestsearch"
+                        target="_blank">
+                        <div class="w3-third w3-container">
+
+                            <img src="./images/movie-theater-g488b90258_1280.jpg" alt="Norway" style="width:100%"
+                                class="w3-hover-opacity">
+                            <div class="w3-container w3-white">
+                                <p><b>3rd Annual Norwalk Film Festival Jan 21st</b></p>
+                                <p>The 3rd Annual Norwalk Film Festival comes to Wall Street</p>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                            </div>
+                        </div>
+                    </a>
+
+
+
+                </div>
+                <br>
+
+                <div class="w3-row-padding">
+
+
+                    <a href="https://www.darienlibrary.org/event/all-about-winter-sowing" target="_blank">
+                        <div class="w3-third w3-container w3-margin-bottom">
+                            <img src="./images/vegetables-g0e61e7382_1280.jpg" alt="Norway" style="width:100%"
+                                class="w3-hover-opacity">
+                            <div class="w3-container w3-white">
+                                <p><b>All About Winter Sowing Jan 26th</b></p>
+                                <p>Attention gardeners: planting season has just begun! Join UConn Advanced Master
+                                    Gardener and Master Composter Alice Ely as she demos and walks us through the
+                                    process of winter sowing, a growing trend amongst gardeners.  </p>
+                                <br>
+                                <br>
+                                <br>
+
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://ourvillagemamas.com/gather" target="_blank">
+                        <div class="w3-third w3-container w3-margin-bottom">
+                            <img src="./images/baby-g443859dc4_1280.jpg" alt="Norway" style="width:100%"
+                                class="w3-hover-opacity">
+                            <div class="w3-container w3-white">
+                                <p><b>
+                                        Our Village</b></p>
+                                <p>Lizzie work's with moms who strive to nurture and nourish their families while
+                                    balancing all the facets of life. </p>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+
+                            </div>
+                        </div>
+                    </a>
+                    <a href="https://www.guggenheim.org/exhibition/nick-cave-forothermore" target="_blank">
+                        <div class="w3-third w3-container">
+
+                            <img src="./images/nick cave.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                            <div class="w3-container w3-white">
+
+
+
+                                <p><b>Nick Cave: Forothermore Thru April</b></p>
+                                <p>Nick Cave (b. 1959, Fulton, Missouri) has become internationally celebrated for his
+                                    elaborate installations and textile works, including his iconic Soundsuits, which
+                                    blend sculpture, costume design, and instrument-making. </p>
+                                <br>
+                                <br>
+                                <br>
+                                <br>
+
+                            </div>
+                        </div>
+                    </a>
+
+
+
+                </div>
+
+
+
+            </div>
+
+            <br>
+
+
+
+            <!-- Images of Me 
+        <div class="w3-row-padding w3-padding-16" id="about">
+            <div class="w3-col m6">
+                <img src="/w3images/avatar_g.jpg" alt="Me" style="width:100%">
+            </div>
+            <div class="w3-col m6">
+                <img src="/w3images/me2.jpg" alt="Me" style="width:100%">
+            </div>
+        </div>
+        <div class="w3-container w3-padding-large" style="margin-bottom:32px">
+        -->
+
+
+            <script>
+                filterSelection("all")
+                function filterSelection(c) {
+                    var x, i;
+                    x = document.getElementsByClassName("filterDiv");
+                    if (c == "all") c = "";
+                    for (i = 0; i < x.length; i++) {
+                        w3RemoveClass(x[i], "show");
+                        if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+                    }
+                }
+
+                function w3AddClass(element, name) {
+                    var i, arr1, arr2;
+                    arr1 = element.className.split(" ");
+                    arr2 = name.split(" ");
+                    for (i = 0; i < arr2.length; i++) {
+                        if (arr1.indexOf(arr2[i]) == -1) { element.className += " " + arr2[i]; }
+                    }
+                }
+
+                function w3RemoveClass(element, name) {
+                    var i, arr1, arr2;
+                    arr1 = element.className.split(" ");
+                    arr2 = name.split(" ");
+                    for (i = 0; i < arr2.length; i++) {
+                        while (arr1.indexOf(arr2[i]) > -1) {
+                            arr1.splice(arr1.indexOf(arr2[i]), 1);
+                        }
+                    }
+                    element.className = arr1.join(" ");
+                }
+
+                // Add active class to the current button (highlight it)
+                var btnContainer = document.getElementById("myBtnContainer");
+                var btns = btnContainer.getElementsByClassName("btn");
+                for (var i = 0; i < btns.length; i++) {
+                    btns[i].addEventListener("click", function () {
+                        var current = document.getElementsByClassName("active");
+                        current[0].className = current[0].className.replace(" active", "");
+                        this.className += " active";
+                    });
+                }
+            </script>
+
+
+
+
+
+            <!-- Contact Section -->
+            <div class="w3-container w3-padding-large w3-grey">
+                <h4 id="contact"><b>Contact Us</b></h4>
+                <div class="w3-row-padding w3-center w3-padding-24" style="margin:0 -16px">
+                    <div class="w3-third w3-dark-grey">
+                        <p><i class="fa fa-envelope w3-xxlarge w3-text-light-grey"></i></p>
+                        <p> <a href="mailto:james.artell@raveis.com">james.artell@raveis.com</a></p>
+                    </div>
+                    <div class="w3-third w3-teal">
+                        <p><i class="fa fa-map-marker w3-xxlarge w3-text-light-grey"></i></p>
+                        <p>Norwalk, CT</p>
+                    </div>
+                    <div class="w3-third w3-dark-grey">
+                        <p><i class="fa fa-phone w3-xxlarge w3-text-light-grey"></i></p>
+                        <p> 203-979-8026</p>
+                    </div>
+                </div>
+                <hr class="w3-opacity">
+                <div class="contact-form">
+                    <form action="https://www.actionforms.io/e/r/jamesartellrealestate" target="_blank">
+                        <label for="fname">First Name</label>
+                        <input type="text" id="fname" name="firstname" placeholder="Your name.." required>
+
+                        <label for="lname">Last Name</label>
+                        <input type="text" id="lname" name="lastname" placeholder="Your last name.." required>
+
+                        <label for="email">Email:</label>
+                        <input type="email" id="lname" name="email" placeholder="email" required>
+
+                        <label for="reason">Reason</label>
+                        <select type="text" id="reason" name="reason" required>
+                            <option value="Thinking about buying a house">Thinking about buying a house</option>
+                            <option value="Thinking about selling a house">Thinking about selling a house</option>
+                            <option value="Sit down consultation to find out how much your house in worth">Sit down
+                                consultation to find out how much your house in worth</option>
+                            <option value="Sit down consultation to find out how much your house in worth">Need help
+                                finding
+                                a rental</option>
+                        </select>
+
+                        <label for="subject">Subject</label>
+                        <textarea id="subject" name="subject" placeholder="Write something.." style="height:200px"
+                            required></textarea>
+
+                        <input type="submit" value="Submit">
+                    </form>
+
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <footer class="w3-container w3-padding-32 w3-dark-grey">
+                <div class="w3-row-padding">
+
+
+
+
+
+
+
+
+                </div>
+            </footer>
+
+
+            <!-- End page content -->
+        </div>
+
+        <script>
+            // Script to open and close sidebar
+            function w3_open() {
+                document.getElementById("mySidebar").style.display = "block";
+                document.getElementById("myOverlay").style.display = "block";
+            }
+
+            function w3_close() {
+                document.getElementById("mySidebar").style.display = "none";
+                document.getElementById("myOverlay").style.display = "none";
+            }
+        </script>
+
+</body>
+
+</html>
