@@ -124,6 +124,62 @@
                 transform: translate(-50%, -50%);
 
             }
+
+            body {
+                font-family: "Lato", sans-serif;
+            }
+
+            .sidebar {
+                height: 100%;
+                width: 0;
+                position: fixed;
+                z-index: 1;
+                top: 0;
+                left: 0;
+                background-color: #111;
+                overflow-x: hidden;
+                transition: 0.5s;
+                padding-top: 60px;
+            }
+
+            .sidebar a {
+                padding: 8px 8px 8px 32px;
+                text-decoration: none;
+                font-size: 25px;
+                color: #818181;
+                display: block;
+                transition: 0.3s;
+            }
+
+            .sidebar a:hover {
+                color: #f1f1f1;
+            }
+
+            .sidebar .closebtn {
+                position: absolute;
+                top: 0;
+                right: 25px;
+                font-size: 36px;
+                margin-left: 50px;
+            }
+
+            .openbtn {
+                font-size: 20px;
+                cursor: pointer;
+                background-color: #111;
+                color: white;
+                padding: 10px 15px;
+                border: none;
+            }
+
+            .openbtn:hover {
+                background-color: #444;
+            }
+
+            #main {
+                transition: margin-left .5s;
+                padding: 16px;
+            }
     </style>
 </head>
 
@@ -136,33 +192,26 @@
                 title="close menu">
                 <i class="fa fa-remove"></i>
             </a>
-            <a href="https://www.raveis.com/agent/JamesArtell/16844" target="_blank"><img
-                    src="./images/James with jacket.jpg" style="width:45%;" class="w3-round"><br><br></a>
-            <h4><b>Marybeth Sullivan <br>
-                    & James Artell
-                </b></h4>
-
+            <img src="/w3images/avatar_g2.jpg" style="width:45%;" class="w3-round"><br><br>
+            <h4><b>PORTFOLIO</b></h4>
+            <p class="w3-text-grey">Template by W3.CSS</p>
         </div>
         <div class="w3-bar-block">
             <a href="#portfolio" onclick="w3_close()" class="w3-bar-item w3-button w3-padding w3-text-teal"><i
-                    class="fa fa-th-large fa-fw w3-margin-right"></i>EVENTS</a>
-
+                    class="fa fa-th-large fa-fw w3-margin-right"></i>PORTFOLIO</a>
+            <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
+                    class="fa fa-user fa-fw w3-margin-right"></i>ABOUT</a>
             <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-padding"><i
                     class="fa fa-envelope fa-fw w3-margin-right"></i>CONTACT</a>
-
         </div>
         <div class="w3-panel w3-large">
-
-
+            <i class="fa fa-facebook-official w3-hover-opacity"></i>
+            <i class="fa fa-instagram w3-hover-opacity"></i>
+            <i class="fa fa-snapchat w3-hover-opacity"></i>
+            <i class="fa fa-pinterest-p w3-hover-opacity"></i>
+            <i class="fa fa-twitter w3-hover-opacity"></i>
+            <i class="fa fa-linkedin w3-hover-opacity"></i>
         </div>
-
-        <div class="mcw-wrap_250" id="maoWrap">
-            <div id="mcwWidget"></div>
-            <script>var maoCalc = {}; maoCalc.settings = { "theme": "theme4", "view": "vertical1", "responsive": "mcw-wrap_250", "font": "Helvetica Neue, Helvetica, Arial, sans-serif", "border": true, "boxShadow": true, "backgroundColor": "#f9f9f9", "fieldColor": "#fff", "textColor": "#334356", "borderColor": "#dde2e5", "currency": "$", "currencySide": "left", "delimiters": ",.", "popup": true, "popupView": "doughnutPopup", "style": true, "widgetTotalInterest": false, "widgetTotalPrincipal": false, "monthlyPayment": "Monthly Payment", "totalPrincipalPaid": "Total Principal", "totalInterestPaid": "Total Interest", "totalPayments": "Total Payments", "years": "years", "title": { "enabled": true, "color": "#334356", "label": "Mortgage Calculator" }, "homePrice": { "label": "Home Price", "value": "350,000" }, "downPayment": { "enabled": true, "label": "Down Payment", "value": "52,000" }, "interestRate": { "label": "Interest Rate", "value": "4.05" }, "mortgageTerm": { "label": "Mortgage Term", "value": "30" }, "pmi": { "enabled": true, "label": "PMI", "value": "1,881.24" }, "taxes": { "enabled": true, "label": "Taxes", "value": "4,375" }, "insurance": { "enabled": true, "label": "Insurance", "value": "1,225" }, "hoa": { "enabled": false, "label": "HOA", "value": false }, "extra": { "enabled": true, "labelAdd": "Add extra payments", "labelRemove": "Remove extra payments", "labelToMonthy": "To monthly", "labelYearly": "Extra yearly" }, "startDate": { "enabled": true, "label": "Start Date" }, "monthsArr": ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"], "button": { "color": "#fff", "bg": "#09f", "label": "Calculate" }, "amortizationSchedule": "Amortization Schedule", "popupLabels": { "monthlyPrincipalInterest": "Monthly Principal & Interest", "monthlyExtraPayment": "Monthly Extra Payment", "monthlyPayment": "MONTHLY PAYMENT", "downPayment": "Down payment", "extraPayments": "Extra payments", "totalPrincipalPaid": "Total principal paid", "totalInterestPaid": "Total interest paid", "totalOfAllPayments": "TOTAL OF ALL PAYMENTS", "amortizationSchedule": "Amortization Schedule", "tablePaymentDate": "Payment date", "tablePayment": "Payment", "tablePrincipal": "Principal", "tableInterest": "Interest", "tableTotalInterest": "Total Interest", "tableBalance": "Balance", "pmi": "PMI", "taxes": "Taxes", "insurance": "Insurance", "shortInsurance": "Ins", "hoa": "HOA", "chartBalance": "Balance", "chartPrincipal": "Principal", "chartInterest": "Interest" }, "useTitleAsLink": false, "titleLinkUrl": "", "useFooterLink": false, "footerLinkAnchor": "", "footerLinkUrl": "" }; (function () { function loadScript(src) { var s, t; s = document.createElement("script"); s.src = src; t = document.getElementsByTagName("script")[0]; t.parentNode.insertBefore(s, t); } function decode(str) { return !window.btoa ? 'not_found' : window.btoa(unescape(encodeURIComponent(str))); } var uri = 'https://mortgage-advice-online.org/widget/' + decode(window.location) + '.js'; loadScript(uri); })();</script>
-        </div>
-
-        <br>
-        <br>
     </nav>
 
     <div>
@@ -194,7 +243,7 @@
 
                 <div class="w3-third w3-container w3-margin-bottom ">
 
-                    <img src=" ./images/9H1A8870.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
+                    <img src="./images/9H1A8870.jpg" alt="Norway" style="width:100%" class="w3-hover-opacity">
                     <div class="into">
 
                         <p>Marybeth Sullivan & James Artell </p>
@@ -659,18 +708,7 @@
             <!-- End page content -->
         </div>
 
-        <script>
-            // Script to open and close sidebar
-            function w3_open() {
-                document.getElementById("mySidebar").style.display = "block";
-                document.getElementById("myOverlay").style.display = "block";
-            }
 
-            function w3_close() {
-                document.getElementById("mySidebar").style.display = "none";
-                document.getElementById("myOverlay").style.display = "none";
-            }
-        </script>
 
 </body>
 
